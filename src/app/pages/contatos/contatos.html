@@ -1,13 +1,20 @@
 <section>
   <h2>Contatos</h2>
-  <p>Tela principal da Agenda</p>
+  <p>Tela carregada do backend.</p>
 
   <button>Novo Contato</button>
 
-  <hr>
+  <hr />
 
-  <div>
-    <p>Nenhum contato carregado ainda.</p>
+  <div *ngIf="contatos.length === 0">
+    <p>Nenhum contato encontrado.</p>
+  </div>
+
+  <div *ngFor="let contato of contatos">
+    <h3>{{ contato.nome }}</h3>
+    <p>Email: {{ contato.email }}</p>
+    <p>Telefone: {{ contato.telefone }}</p>
+    <p>Data de Nascimento: {{ contato.dataNascimento }}</p>
+    <hr />
   </div>
 </section>
-
