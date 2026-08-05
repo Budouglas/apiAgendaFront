@@ -3,7 +3,10 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "213c35ff-ba48-472d-890a-72900d1fc68d"
+    "analytics": "213c35ff-ba48-472d-890a-72900d1fc68d",
+    "warnings": {
+      "versionMismatch": true
+    }
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -11,7 +14,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "flat": false,
+          "skipTests": false
         }
       },
       "root": "",
@@ -29,11 +34,10 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-            ]
+            "styles": ["src/styles.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css"],
+            "scripts": ["node_modules/@popperjs/core/dist/umd/popper.min.js", "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
+
           "configurations": {
             "production": {
               "budgets": [
