@@ -9,7 +9,7 @@ import { Contato } from '../../models/contato';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contatos.html',
-  styleUrl: './contatos.css',
+  styleUrl: './contatos.scss',
 })
 export class Contatos implements OnInit {
   private contatoService = inject(ContatosService);
