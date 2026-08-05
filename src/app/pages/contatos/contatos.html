@@ -1,16 +1,58 @@
 <section>
   <h2>Contatos</h2>
-  <p>Tela carregada do backend.</p>
+  <p>Cadastro e listagem de contatos.</p>
 
-  <button>Novo Contato</button>
+  <form [formGroup]="form" (ngSubmit)="salvar()">
+    <div>
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" formControlName="nome" />
+
+      <small *ngIf="form.controls.nome.touched && form.controls.nome.invalid">
+        Nome é obrigatório e deve ter pelo menos 3 caracteres.
+      </small>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+
+      <small *ngIf="form.controls.email.touched && form.controls.email.invalid">
+        Informe um email válido.
+      </small>
+    </div>
+
+    <div>
+      <label for="telefone">Telefone</label>
+      <input id="telefone" type="text" formControlName="telefone" />
+
+      <small *ngIf="form.controls.telefone.touched && form.controls.telefone.invalid">
+        Telefone é obrigatório.
+      </small>
+    </div>
+
+    <div>
+      <label for="dataNascimento">Data de nascimento</label>
+      <input id="dataNascimento" type="date" formControlName="dataNascimento" />
+
+      <small *ngIf="form.controls.dataNascimento.touched && form.controls.dataNascimento.invalid">
+        Data de nascimento é obrigatória.
+      </small>
+    </div>
+
+    <button type="submit">Salvar contato</button>
+  </form>
 
   <hr />
 
-  <div *ngIf="contatos.length === 0">
+  <div *ngIf="carregando">
+    <p>Carregando contatos...</p>
+  </div>
+
+  <div *ngIf="!carregando && contatos.length === 0">
     <p>Nenhum contato encontrado.</p>
   </div>
 
-  <div *ngFor="let contato of contatos">
+  <div *ngFor="let contato of contatos; trackBy: trackById">
     <h3>{{ contato.nome }}</h3>
     <p>Email: {{ contato.email }}</p>
     <p>Telefone: {{ contato.telefone }}</p>

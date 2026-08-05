@@ -1,0 +1,29 @@
+// variáveis de cor do bootstrap
+$primary: #4f46e5;
+$success: #10b981;
+$danger: #ef4444;
+$dark: #0f172a;
+
+//customização de fontes e escrita
+$font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+$font-size-base: 0.95rem; // tamanho das letras
+$headings-font-weight: 600;
+$spacer: 1rem; //coloca os títulos em negrito
+
+//ferramentas importadas
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+
+//esse @import junta tudo que foi selecionado acima
+@import "bootstrap/scss/bootstrap";
+
+
+//aqui vão os estilos globais naturais, tudo que não é do bootstrap
+body {
+  background-color: #f8fafc; //cor de fundo da página
+  -webkit-font-smoothing: antialiased; //deixa a fonte mais nítida
+}
