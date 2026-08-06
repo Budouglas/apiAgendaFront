@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {Contatos} from './pages/contatos/contatos';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { Header } from './core/component/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [Contatos],
+  imports: [RouterLink, RouterOutlet, Header],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-}
+export class App {}
