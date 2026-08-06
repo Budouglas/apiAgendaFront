@@ -1,62 +1,13 @@
-<section>
-  <h2>Contatos</h2>
-  <p>Cadastro e listagem de contatos.</p>
-
-  <form [formGroup]="form" (ngSubmit)="salvar()">
-    <div>
-      <label for="nome">Nome</label>
-      <input id="nome" type="text" formControlName="nome" />
-
-      <small *ngIf="form.controls.nome.touched && form.controls.nome.invalid">
-        Nome é obrigatório e deve ter pelo menos 3 caracteres.
-      </small>
-    </div>
-
-    <div>
-      <label for="email">Email</label>
-      <input id="email" type="email" formControlName="email" />
-
-      <small *ngIf="form.controls.email.touched && form.controls.email.invalid">
-        Informe um email válido.
-      </small>
-    </div>
-
-    <div>
-      <label for="telefone">Telefone</label>
-      <input id="telefone" type="text" formControlName="telefone" />
-
-      <small *ngIf="form.controls.telefone.touched && form.controls.telefone.invalid">
-        Telefone é obrigatório.
-      </small>
-    </div>
-
-    <div>
-      <label for="dataNascimento">Data de nascimento</label>
-      <input id="dataNascimento" type="date" formControlName="dataNascimento" />
-
-      <small *ngIf="form.controls.dataNascimento.touched && form.controls.dataNascimento.invalid">
-        Data de nascimento é obrigatória.
-      </small>
-    </div>
-
-    <button type="submit">Salvar contato</button>
-  </form>
-
-  <hr />
-
-  <div *ngIf="carregando">
-    <p>Carregando contatos...</p>
+<p class="d-inline-flex gap-1">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
   </div>
-
-  <div *ngIf="!carregando && contatos.length === 0">
-    <p>Nenhum contato encontrado.</p>
-  </div>
-
-  <div *ngFor="let contato of contatos; trackBy: trackById">
-    <h3>{{ contato.nome }}</h3>
-    <p>Email: {{ contato.email }}</p>
-    <p>Telefone: {{ contato.telefone }}</p>
-    <p>Data de Nascimento: {{ contato.dataNascimento }}</p>
-    <hr />
-  </div>
-</section>
+</div>
