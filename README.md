@@ -1,61 +1,20 @@
-# AgendaFront
+# Agenda Telefônica
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.8.
+## Características do Projeto
+O projeto é uma aplicação web moderna e leve, projetada para funcionar como uma agenda telefônica digital. Seu foco principal é a velocidade de navegação e a simplicidade de uso.
 
-## Development server
+## Quem ele deve atender
+Este sistema foi feito para atender:
+* Pessoas que precisam de um local centralizado e rápido para guardar seus contatos pessoais.
+* Profissionais autônomos ou pequenas empresas que buscam organizar seus contatos de clientes sem a complexidade de sistemas pesados.
 
-To start a local development server, run:
+## Como ele deve atender
+A aplicação atende a essas necessidades através de:
+* Uma interface limpa e intuitiva, livre de distrações visuais.
+* Navegação instantânea entre as telas, sem carregamentos demorados na página.
+* Um design 100% responsivo, permitindo consultar e gerenciar números de telefone com o mesmo conforto no computador ou no celular.
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-Teste
+## Tecnologias Usadas por Enquanto
+* **Angular (v22)**: Framework principal utilizado para construir a estrutura de componentes e gerenciar as rotas do site.
+* **Bootstrap (v5.3.8)**: Biblioteca de estilos utilizada para garantir o visual moderno dos cards, tabelas e a responsividade da tela.
+* **SASS / SCSS**: Pré-processador de estilos utilizado para customizar de forma limpa as cores base e a tipografia do Bootstrap.
