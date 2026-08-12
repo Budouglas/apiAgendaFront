@@ -1,28 +1,23 @@
-// usa $ antes de cada variável dentro do bloco 'with'
-@use "bootstrap/scss/bootstrap" with (
-  $primary: #4f46e5,
-  $success: #10b981,
-  $danger: #ef4444,
-  $dark: #0f172a,
+$verdeSalvia: #4A7C59;
+$terracota: #e07a5f;
+$fundoOffWhite: #f8f9fa;
 
-  $font-family-base: ('Inter', system-ui, -apple-system, sans-serif),
-  $font-size-base: 0.95rem,
-  $headings-font-weight: 600,
-  $spacer: 1rem
+@use "bootstrap/scss/bootstrap" with (
+  $primary: $verdeSalvia,
+  $secondary: $terracota,
+  $body-bg: $fundoOffWhite,
+  $enable-shadows: true
 );
 
-body {
-  background-color: #f8fafc;
-  -webkit-font-smoothing: antialiased;
-}
-
-html, body { //
+html, body {
   height: 100%;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 app-root {
   display: flex;
   flex-direction: column;
-  min-height: 102vh; //cola o footer no funda da página
+  min-height: 100vh;
+  background-color: $fundoOffWhite;
 }
